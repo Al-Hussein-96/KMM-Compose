@@ -33,6 +33,16 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+
+
+                val voyagerVersion = "1.0.0-rc05"
+
+                implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
+
+//                val navVersion = "2.6.0"
+//                implementation("androidx.navigation:navigation-compose:$navVersion")
+
+
             }
         }
         val androidMain by getting {

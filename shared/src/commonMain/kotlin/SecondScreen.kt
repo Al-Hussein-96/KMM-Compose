@@ -1,5 +1,4 @@
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -17,22 +16,18 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.core.screen.Screen
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.Navigator
-import cafe.adriel.voyager.navigator.currentOrThrow
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
 
-object HomeScreen : Screen {
+object SecondScreen : Screen {
+
     @OptIn(ExperimentalResourceApi::class)
     @Composable
     override fun Content() {
-        val navigator = LocalNavigator.currentOrThrow
-
         MaterialTheme {
-            val greetingText by remember { mutableStateOf("Hello, World!") }
-            val showImage by remember { mutableStateOf(false) }
+            var greetingText by remember { mutableStateOf("Second Screen!") }
+            var showImage by remember { mutableStateOf(false) }
 
             Scaffold(
                 topBar = {
@@ -48,10 +43,8 @@ object HomeScreen : Screen {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Button(onClick = {
-                        navigator.push(SecondScreen)
-
-//                    greetingText = "Hello, ${getPlatformName()}"
-//                    showImage = !showImage
+                        greetingText = "Hello, ${getPlatformName()}"
+                        showImage = !showImage
                     }) {
                         Text(greetingText)
                     }
@@ -70,6 +63,3 @@ object HomeScreen : Screen {
     }
 
 }
-
-
-expect fun getPlatformName(): String
