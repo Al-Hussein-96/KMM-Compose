@@ -36,12 +36,7 @@ kotlin {
                 implementation(compose.animation)
 
 
-                val voyagerVersion = "1.0.0-rc06"
                 val napierVersion = "2.6.1"
-
-                implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
-                implementation("cafe.adriel.voyager:voyager-tab-navigator:$voyagerVersion")
-                implementation("cafe.adriel.voyager:voyager-transitions:$voyagerVersion")
 
 
 //                val navVersion = "2.6.0"
