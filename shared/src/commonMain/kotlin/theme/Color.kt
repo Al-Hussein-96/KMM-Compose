@@ -12,6 +12,7 @@ val Green = Color(0xFF77af14)
 val DarkBlue = Color(0xFF1F4F59)
 val LightBlue = Color(0xFF54c0cc)
 val IconColor = Color(0xFF606060)
+val darkGray = Color(0x224C4964)
 
 internal val colorPlates: ColorScheme = lightColorScheme(
     primary = DarkBlue,
